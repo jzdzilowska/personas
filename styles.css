@@ -55,22 +55,25 @@ h3 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
+  height: 500px;
+  margin-top: 30px;
 }
 
 .questions ul {
-  max-width: 400px;
+  width: 407px;
+  padding: 0px;
 }
 
 .sketch img, .storyboard img {
-  width: 100%;
-  max-width: 600px;
+  height: 500px;
+  width: auto;
 }
 
 /* Kawaii text box style */
 .cloud-textbox {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin: 5px;
   border: 2px dotted rgb(0, 0, 0);
   background-color: #ffffff;
@@ -80,6 +83,7 @@ h3 {
   transition: transform 0.2s ease-in-out;
   text-align: center;
   cursor: pointer;
+  width: 100%;
 }
 
 /* Shiver effect on hover */
