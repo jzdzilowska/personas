@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personas and Storyboarding</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function showPopup(question, answer) {
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.innerHTML = `<h4>${question}</h4><p>${answer}</p><button onclick='closePopup(this)'>Close</button>`;
+            document.body.appendChild(popup);
+        }
+
+        function closePopup(button) {
+            document.body.removeChild(button.parentElement);
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -16,27 +28,30 @@
         <section class="section">
             <div class="questions">
                 <ul>
-                    <h2>...Questions asked...</h2>
-                    <div class="cloud-textbox">
+                    <h2>   ...Questions asked...</h2>
+                    <div class="cloud-textbox" onclick="showPopup('What year are you in?', 'The question helps identify patterns between user experience and familiarity with the system. Usual responses showed that freshmen often reported more confusion with the card reader and login process, while upperclassmen were more efficient but still frustrated by technical glitches. This distinction helps evaluate whether the interface’s issues stem from poor design or lack of user familiarity - in this case, partially both.')">
                         What year are you in? 
                     </div>
-                    <div class="cloud-textbox">
+                    <div class="cloud-textbox" onclick="showPopup('What was your first experience with the kiosk like?', 'Reveals how intuitive and user-friendly the system is for first-time users, providing insight into the accessibility of the interface without any onboarding assistance. It also helps identify whether confusion or frustration starts early and persists over time. The interviews revealed several consistent pain points - many users’ first experiences were marked by frustration, especially due to the unreliable card reader, which often required multiple swipes before recognizing Brown ID. Notably, when it failed - resulting in truncated login IDs - the lack of clear feedback was confusing on first use.')">
                         What was your first experience with the kiosk like? 
                     </div>
-                    <div class="cloud-textbox">
+                    <div class="cloud-textbox" onclick="showPopup('Nowadays, how often do you use the kiosk?', 'Helps gauge user familiarity with the system and identify usage patterns. Responses showed that frequent users - most of them being sophmomores and juniors - tend to navigate the interface quickly, but are also more sensitive to technical glitches — particularly the unreliable card reader and system slowdowns — as they encounter them often. Infrequent users (mostly freshmen), on the other hand, struggle primarily with understanding the interface, especially when the system fails to provide clear feedback on error.')">
                         Nowadays, how often do you use the kiosk? 
                     </div>
-                    <div class="cloud-textbox">
+                    <div class="cloud-textbox" onclick="showPopup('How important is time efficiency to you when using the kiosk?', 'Easier to respond to than ..When do you use the kiosk?.. as its more straightforward and easier to quantify (difficult to analyze usage over long periods). The question helps to indirectly identify whether users prioritize speed over other factors, such as convenience. The interviews showed that time efficiency is pivotal - most students mentioned using the kiosk in-between classes, rushing during short breaks. System failing, especially at times of peak usage, leads to frustration.')">
                         How important is time efficiency to you when using the kiosk?
                     </div>
-                    <div class="cloud-textbox">
-                        How intuitive do you find the kiosk's digital display and the card reader? Is anything confusing?
+                    <div class="cloud-textbox" onclick="showPopup('How intuitive do you find the kiosks digital display and the card reader?', 'Directly assesses the two primary interaction points users engage with, revealing whether the interface and hardware require additional effort to understand than whats provided. Responses showed that users found the digital display mostly clear, despite often hesitating before clicking the CONFIRM button. Most of them had difficulty with the card reader, which many found non-intuitive (no indication which side to swipe the card with, whether to simultaneously input login manually on the screen) often requiring multiple attempts to work.')">
+                        How intuitive do you find the kiosk's digital display and the card reader?
                     </div>
-                    <div class="cloud-textbox">
-                        Do you encounter any difficulties while using it?
+                    <div class="cloud-textbox" onclick="showPopup('Have you encountered any difficulties while using it?', 'Opens the door for users to share any problems they’ve faced, without leading to specific issues. As mentioned above, responses commonly highlighted card reader malfunctions, where users had to swipe multiple times, and unclear feedback from the system, especially when it failed to register the login properly. Interestingly, one user mentioned one of the screens being positioned too low for taller students to see properly, suggesting a physical design issue. Another one emphasized the right-sided mounting of the reader, inconvenient for left-handed users.')">
+                        Have you encountered any difficulties while using it?
                     </div>
-                    <div class="cloud-textbox">
+                    <div class="cloud-textbox" onclick="showPopup('If you could change one thing about the kiosk, what would it be?', 'Encourages users to focus on the most pressing issue that impacts their experience, rather than opening a potentially overwhelming for the responder conversation on all experienced difficulties. As aforementioned, responses suggested improving the reliability of the card reader. Other suggestions included adding a manual log-in option that doesnt require a BrownID, as some students were numerously unable to pickup their packages because of a forgotten/lost ID, or only the reader malfunctioning.')">
                         If you could change one thing about the kiosk, what would it be?
+                    </div>
+                    <div class="cloud-textbox" onclick="showPopup('What do you like about the kiosk?', 'Responses highlighted convenience and simplicity of the interface relative to other digital systems on campus. Users also appreciated the number of packages being shown on-screen.')">
+                        What do you like about the kiosk?
                     </div>
                 </ul>
             <div class="sketch">
@@ -45,15 +60,15 @@
         </div>
 
         </section>
-
         <section class="section">
-            <h2>2. Observations</h2>
-            <ul>
-                <li>Users often struggled to find the produce search function.</li>
-                <li>Many users hesitated when inserting cash or scanning coupons.</li>
-                <li>Some users expressed frustration at slow response times on the screen.</li>
-                <li>People with more items found it difficult to manage bagging and payment simultaneously.</li>
-            </ul>
+            <h2>...Observations...</h2>
+            <div class="notes-container">
+                <div class="post-it">Many users struggled with the card reader, often having to swipe their Brown ID multiple times before it was properly recognized.</div>
+                <div class="post-it">Users frequently showed signs of frustration, like sighing or repeatedly swiping their cards with increasing force.</div>
+                <div class="post-it">When the card reader failed, the system sometimes truncated the login ID, causing users to wait for the interface to reset before trying again. Freshmen (as interviews revealed) were particularly confused by this.</div>
+                <div class="post-it">After logging in, users generally found the digital display clear when showing the number of packages, but some hesitated before clicking "Confirm," suggesting the button’s function might not be immediately obvious.</div>
+                <div class="post-it">Time efficiency appeared to be a major concern — users often became impatient when delays occurred due to card reader issues or system resets.</div>
+              </div>
         </section>
 
         <section class="section">
