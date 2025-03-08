@@ -255,3 +255,16 @@ h4 {
   50% { transform: rotate(-1deg); }
   75% { transform: rotate(1deg); }
 }
+
+footer a {
+  background:black; 
+  color: white;
+  font-style:italic; 
+  text-decoration: none;
+  padding: 3px;
+}
+
+footer a:hover {
+  background: white;
+  color: black;
+}
