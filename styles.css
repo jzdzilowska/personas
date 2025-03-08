@@ -16,7 +16,6 @@ body {
   width: 100vw; 
   font-family: 'Manifont Grotesk', sans-serif;
   font-weight: 300;
-  font-style: italic;
   margin: 0px;
   padding: 0;
   background-color: #ffffff;
@@ -59,6 +58,7 @@ h2 {
 
 h3 {
   margin: 0px; 
+  margin-bottom: 20px;
   font-size: 25px;
 }
 
@@ -68,10 +68,17 @@ h4 {
 }
 
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
+.section h2 {
+  font-weight: 500;
+  font-size: 40px;
+  margin-top:20px;
+  margin-bottom:20px;
+  font-style: italic;
+}
 /* ----------------------------- PART 1 ----------------------------- */
 
 .questions {
@@ -185,4 +192,58 @@ h4 {
   padding: 10px 20px;
   cursor: pointer;
   text-transform: uppercase;
+  border-width: 0px; 
+}
+
+/* ----------------------------- PART 4 ----------------------------- */ 
+.personas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.personas img {
+  width: 400px;
+  height: auto;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  margin-top:20px;
+  cursor: help;
+}
+
+.persona {
+  width: 480px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.persona img[alt="Empathy Map for Anxious Amber - the unsure freshman"] { 
+  transform: rotate(-3deg); 
+}
+.persona img[alt="Empathy Map for Joyful Jamie - the confident senior"] { 
+  transform: rotate(3deg); 
+  margin-top:32px;
+}
+
+.persona img[alt="Empathy Map for Anxious Amber - the unsure freshman"]:hover {
+  animation: shiver 0.7s infinite ease-in-out;
+}
+
+.persona img[alt="Empathy Map for Joyful Jamie - the confident senior"]:hover {
+  animation: shiver2 0.7s infinite ease-in-out;
+}
+
+@keyframes shiver {
+  0%, 100% { transform: rotate(-3deg); }
+  25% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+@keyframes shiver2 {
+  0%, 100% { transform: rotate(3deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+  75% { transform: rotate(1deg); }
 }
