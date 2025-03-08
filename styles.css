@@ -150,6 +150,7 @@ h4 {
   justify-content: center;
   align-items: center;
   height: auto;
+  transition: margin 0.5s ease-in-out; /* Smooth transition over 0.5s */
 }
 
 .post-it p {
@@ -164,6 +165,13 @@ h4 {
 .post-it:nth-child(3) { background-color: #DE3C4B; --rotation: -2deg; --index: 3; }
 .post-it:nth-child(4) { background-color: #87F5FB; --rotation: 1deg; --index: 4; }
 .post-it:nth-child(5) { background-color: #2F131E; --rotation: -1deg; --index: 5; color:white}
+
+.post-it:hover {
+  animation: shiver 1s infinite ease-in-out;
+  z-index: 1000;
+  margin-right: 10px; /* Or whatever larger margin you want */
+  margin-left:10px;
+}
 
 /* ----------------------------- PART 3 ----------------------------- */
 .popup {
